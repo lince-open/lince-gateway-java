@@ -47,12 +47,6 @@
 
 <!--        <dependency>-->
 <!--            <groupId>work.lince</groupId>-->
-<!--            <artifactId>lince-commons-swagger</artifactId>-->
-<!--            <version>0.0.1</version>-->
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>work.lince</groupId>-->
 <!--            <artifactId>lince-commons-authentication</artifactId>-->
 <!--            <version>0.0.1</version>-->
 <!--        </dependency>-->
@@ -63,11 +57,11 @@
 <!--            <version>0.0.3</version>-->
 <!--        </dependency>-->
 
-<!--        <dependency>-->
-<!--            <groupId>work.lince</groupId>-->
-<!--            <artifactId>lince-commons-exception</artifactId>-->
-<!--            <version>0.0.1</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>work.lince</groupId>
+            <artifactId>lince-commons-exception</artifactId>
+            <version>0.0.1</version>
+        </dependency>
 
 <!--        <dependency>-->
 <!--            <groupId>work.lince</groupId>-->
@@ -75,11 +69,11 @@
 <!--            <version>0.0.2</version>-->
 <!--        </dependency>-->
 
-<!--        <dependency>-->
-<!--            <groupId>work.lince</groupId>-->
-<!--            <artifactId>lince-commons-log</artifactId>-->
-<!--            <version>0.0.1</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>work.lince</groupId>-->
+        <!--            <artifactId>lince-commons-log</artifactId>-->
+        <!--            <version>0.0.1</version>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
@@ -209,7 +203,8 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <jvmArguments>-Xms256M -Xmx256M -XX:+ExitOnOutOfMemoryError -XX:+CrashOnOutOfMemoryError</jvmArguments>
+                    <jvmArguments>-Xms256M -Xmx256M -XX:+ExitOnOutOfMemoryError -XX:+CrashOnOutOfMemoryError
+                    </jvmArguments>
                 </configuration>
                 <executions>
                     <execution>

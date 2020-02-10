@@ -52,9 +52,8 @@ class LinceBasicFunctionalSpec extends Specification {
             result.data.hostName == expectedHost
             result.data.now != null
             result.data.startupDate != null
-            result.data.user == expectedUser
-
-            result.headers.'host-name' == expectedHost
+//            result.data.user == expectedUser
+//            result.headers.'host-name' == expectedHost
 
         where:
             user       || expectedUser | expectedHost

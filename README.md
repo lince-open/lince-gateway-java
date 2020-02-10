@@ -5,8 +5,20 @@ Solução
 * Autenticação com Spring Security e uso de Header
 * Testes Unitários com JUnit/Spock/Groove
 * Testes Funcionais com JUnit/Spock/Groove
-* Swagger2
 * Docker
+
+
+#resolver pendencias
+
+* segurança com jwt
+* adicionar wiremock para testes
+* implementar tratamento de erros
+** not found
+** repassar erros identificados
+* verificar subistituto do rest-provider (header com hostname)
+* repassar usuário logado
+* identificar configurações equivalentes ao jackson
+* construir teste de stress pra validar o funcionamento do reactor
 
 ![](https://github.com/lince-open/lince-gateway-java/workflows/Java%20CI/badge.svg)
 [![Known Vulnerabilities](https://snyk.io/test/github/lince-open/lince-gateway-java/badge.svg)](https://snyk.io/test/github/pedrozatta/lince-gateway-java)

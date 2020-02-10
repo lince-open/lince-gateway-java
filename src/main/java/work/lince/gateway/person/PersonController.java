@@ -30,7 +30,7 @@ public class PersonController {
         return service.create(person);
     }
 
-    @PostMapping("/{id}")
+    @GetMapping("/{id}")
     public Mono<Person> findById(@PathVariable(value = "id") String id) {
         return service.findById(id);
     }
