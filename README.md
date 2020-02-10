@@ -19,6 +19,7 @@ Solução
 * repassar usuário logado
 * identificar configurações equivalentes ao jackson
 * construir teste de stress pra validar o funcionamento do reactor
+* verificar porque perdeu as metricas do actuator
 * implementar person
 * implementar projects
 
