@@ -1,7 +1,9 @@
 package work.lince.gateway.person;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.ClientResponse;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -26,15 +28,14 @@ public class PersonClientService {
     }
 
     public Flux<Person> findAll() {
-        WebClient client = WebClient.create("http://localhost:51001/people");
+        WebClient client = WebClient.create("http://localhost:51001");
 
-//         Mono<ClientResponse> result = client.get()
-//                .uri("/hello")
-//                .accept(MediaType.APPLICATION_JSON)
-//                .retrieve();
-//
-//        result.flatMap(res -> res.bodyToMono(String.class)).block();
+        Flux<Person> result = client.get()
+                .uri("/people")
+                .accept(MediaType.APPLICATION_JSON)
+                .retrieve()
+                .bodyToFlux(Person.class);
 
-        return Flux.empty();
+        return result;
     }
 }
