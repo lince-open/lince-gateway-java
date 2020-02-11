@@ -25,42 +25,49 @@
 
     <dependencies>
 
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.boot</groupId>-->
-        <!--            <artifactId>spring-boot-starter-security</artifactId>-->
-        <!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webflux</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-registry-prometheus</artifactId>
         </dependency>
 
-        <!--        <dependency>-->
-        <!--            <groupId>work.lince</groupId>-->
-        <!--            <artifactId>lince-commons-authentication</artifactId>-->
-        <!--            <version>0.0.1</version>-->
-        <!--        </dependency>-->
+        <dependency>
+            <groupId>work.lince</groupId>
+            <artifactId>lince-commons-authentication</artifactId>
+            <version>0.0.1</version>
+        </dependency>
 
-        <!--        <dependency>-->
-        <!--            <groupId>work.lince</groupId>-->
-        <!--            <artifactId>lince-commons-health</artifactId>-->
-        <!--            <version>0.0.3</version>-->
-        <!--        </dependency>-->
+        <dependency>
+            <groupId>work.lince</groupId>
+            <artifactId>lince-commons-health</artifactId>
+            <version>0.0.3</version>
+        </dependency>
 
         <dependency>
             <groupId>work.lince</groupId>
             <artifactId>lince-commons-exception</artifactId>
             <version>0.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>work.lince</groupId>
+            <artifactId>lince-commons-rest-client</artifactId>
+            <version>0.0.2</version>
         </dependency>
 
         <dependency>
