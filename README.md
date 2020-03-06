@@ -29,19 +29,28 @@ https://hub.docker.com/repository/docker/linceopen/lince-gateway
 
 mvn clean package dockerfile:build
 
-docker tag lince-open/lince-gateway:latest linceopen/lince-gateway:0.0.1
+docker tag lince-open/lince-gateway:latest linceopen/lince-gateway:0.0.2
 
-docker push linceopen/lince-gateway:0.0.1
+docker push linceopen/lince-gateway:0.0.2
 
 docker tag lince-open/lince-gateway:latest linceopen/lince-gateway:latest
 
 docker push linceopen/lince-gateway:latest
 
+###GCLOUD
+
+docker pull linceopen/lince-gateway:0.0.2
+
+docker tag linceopen/lince-gateway:0.0.2 gcr.io/lince-work/lince-gateway:0.0.2
+
+gcloud docker -- push gcr.io/lince-work/lince-gateway:0.0.2
+
 ###Start
 
 docker run --name lince-gateway \
--e LINCE_KVS_PORT='8080' \
+-e PORT='8080' \
 -e LINCE_LOG_LEVEL='WARN' \
+-e LINCE_API_PERSON='http://localhost:51002/people' \
 -p 50001:8080 \
 -t lince-open/lince-gateway:latest
 
