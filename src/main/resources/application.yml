@@ -12,6 +12,18 @@ spring:
     default-property-inclusion: non_null
     time-zone: America/Sao_Paulo
 
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: full
+        connectTimeout: 5000
+        readTimeout: 5000
+lince:
+  api:
+    person:
+      url: ${LINCE_API_PERSON:http://localhost:51001/people}
+
 logging:
   level:
     work:

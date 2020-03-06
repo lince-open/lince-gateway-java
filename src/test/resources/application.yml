@@ -9,6 +9,11 @@ spring:
     url: jdbc:h2:mem:example
     platform: h2
 
+lince:
+  api:
+    person:
+      url: http://localhost:51001/people
+
 management:
   endpoints:
     web:

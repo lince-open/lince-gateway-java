@@ -15,13 +15,7 @@ Solução
 * implementar tratamento de erros
 ** not found
 ** repassar erros identificados
-* verificar subistituto do rest-provider (header com hostname)
-* repassar usuário logado
-* identificar configurações equivalentes ao jackson
-* construir teste de stress pra validar o funcionamento do reactor
-* verificar porque perdeu as metricas do actuator
-* implementar person
-* implementar projects
+
 
 ![](https://github.com/lince-open/lince-gateway-java/workflows/Java%20CI/badge.svg)
 [![Known Vulnerabilities](https://snyk.io/test/github/lince-open/lince-gateway-java/badge.svg)](https://snyk.io/test/github/pedrozatta/lince-gateway-java)
@@ -35,19 +29,28 @@ https://hub.docker.com/repository/docker/linceopen/lince-gateway
 
 mvn clean package dockerfile:build
 
-docker tag lince-open/lince-gateway:latest linceopen/lince-gateway:0.0.1
+docker tag lince-open/lince-gateway:latest linceopen/lince-gateway:0.0.2
 
-docker push linceopen/lince-gateway:0.0.1
+docker push linceopen/lince-gateway:0.0.2
 
 docker tag lince-open/lince-gateway:latest linceopen/lince-gateway:latest
 
 docker push linceopen/lince-gateway:latest
 
+###GCLOUD
+
+docker pull linceopen/lince-gateway:0.0.2
+
+docker tag linceopen/lince-gateway:0.0.2 gcr.io/lince-work/lince-gateway:0.0.2
+
+gcloud docker -- push gcr.io/lince-work/lince-gateway:0.0.2
+
 ###Start
 
 docker run --name lince-gateway \
--e LINCE_KVS_PORT='8080' \
+-e PORT='8080' \
 -e LINCE_LOG_LEVEL='WARN' \
+-e LINCE_API_PERSON='http://localhost:51002/people' \
 -p 50001:8080 \
 -t lince-open/lince-gateway:latest
 

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-@FeignClient(value = "lince-person", url = "http://localhost:51001/people")
+@FeignClient(value = "lincePerson", url = "${lince.api.person.url}")
 @RequestMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 public interface PersonClientService {
 
